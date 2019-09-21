@@ -3,15 +3,11 @@ using System.Collections;
 
 public class Board : MonoBehaviour {
 
-    public ColorType currentPlayerColor = ColorType.White;
-    public bool isPieceSelected = false;
+    public bool isCurrentPlayerWhite = true;
+    public bool isPieceSelected;
     public Piece currentSelectedPiece;
 
-    // Use this for initialization
-    void Start() {
-    }
+    public int destroyedWhiteCount;
+    public int destroyedBlackCount;
 
-    // Update is called once per frame
-    void Update() {
-    }
 }
