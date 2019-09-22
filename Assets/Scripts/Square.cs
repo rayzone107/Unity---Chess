@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Square : MonoBehaviour {
 
@@ -44,7 +45,7 @@ public class Square : MonoBehaviour {
             Vector3 moveTo = new Vector3(xTransform, board.currentSelectedPiece.transform.position.y, zTransform);
             board.currentSelectedPiece.transform.position = moveTo;
             board.isCurrentPlayerWhite = !board.isCurrentPlayerWhite;
-
+            
             pieceOnTop = board.currentSelectedPiece; // Set piece on square to current piece
             board.currentSelectedPiece = null; // Cleared current Selected piece
             pieceOnTop.onBlock.pieceOnTop = null; // Set piece on last square to null
@@ -52,6 +53,7 @@ public class Square : MonoBehaviour {
             pieceOnTop.numberOfTurnsPlayed++;
             pieceOnTop.HighlightPiece(false);
             RemoveHighlightFromAllSquares();
+            ShowChangePlayer();
         }
     }
 
@@ -75,5 +77,24 @@ public class Square : MonoBehaviour {
             piece.transform.position = moveTo;
             board.destroyedBlackCount++;
         }
+    }
+
+    private void ShowChangePlayer() {
+        Canvas canvas = FindObjectOfType<Canvas>();
+
+        foreach (Transform canvasTransform in canvas.transform) {
+            if (canvasTransform.gameObject.GetComponent<PlayerTurn>() != null) {
+                PlayerTurn playerTurn = canvasTransform.gameObject.GetComponent<PlayerTurn>();
+                playerTurn.gameObject.SetActive(true);
+                TextMeshProUGUI text = playerTurn.GetComponentInChildren<TextMeshProUGUI>();
+                text.text = board.isCurrentPlayerWhite ? "White Player Turn" : "Black Player Turn";
+                StartCoroutine(HideChangePlayer(playerTurn));
+            }
+        }
+    }
+
+    IEnumerator HideChangePlayer(PlayerTurn playerTurn) {
+        yield return new WaitForSeconds(2);
+        playerTurn.gameObject.SetActive(false);
     }
 }

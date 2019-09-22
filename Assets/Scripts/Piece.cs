@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Piece : MonoBehaviour {
     [SerializeField] public bool isWhite;
@@ -79,12 +80,71 @@ public class Piece : MonoBehaviour {
                 leftSide.HighlightSquare(true);
             }
         }
-
         if (onBlock.y > 0) {
             Square rightSide = board.squaresArray[onBlock.x + (isWhite ? 1 : -1), onBlock.y - 1];
             if (rightSide.pieceOnTop != null && rightSide.pieceOnTop.isWhite != isWhite) {
                 rightSide.HighlightSquare(true);
             }
+        }
+    }
+
+    private void HighlightForKnight() {
+        if (onBlock.x < 6 && onBlock.y > 0) {
+            CheckAndHighlight(board.squaresArray[onBlock.x + 2, onBlock.y - 1]); // Top Right
+        }
+        if (onBlock.x < 6 && onBlock.y < 7) {
+            CheckAndHighlight(board.squaresArray[onBlock.x + 2, onBlock.y + 1]); // Top Left
+        }
+        if (onBlock.x < 7 && onBlock.y < 6) {
+            CheckAndHighlight(board.squaresArray[onBlock.x + 1, onBlock.y + 2]); // Left Top
+        }
+        if (onBlock.x > 0 && onBlock.y < 6) {
+            CheckAndHighlight(board.squaresArray[onBlock.x - 1, onBlock.y + 2]); // Left Bottom
+        }
+        if (onBlock.x > 1 && onBlock.y < 7) {
+            CheckAndHighlight(board.squaresArray[onBlock.x - 2, onBlock.y + 1]); // Bottom Left
+        }
+        if (onBlock.x > 1 && onBlock.y > 0) {
+            CheckAndHighlight(board.squaresArray[onBlock.x - 2, onBlock.y - 1]); // Bottom Right
+        }
+        if (onBlock.x > 0 && onBlock.y > 1) {
+            CheckAndHighlight(board.squaresArray[onBlock.x - 1, onBlock.y - 2]); // Right Bottom
+        }
+        if (onBlock.x < 7 && onBlock.y > 1) {
+            CheckAndHighlight(board.squaresArray[onBlock.x + 1, onBlock.y - 2]); // Right Top
+        }
+    }
+
+    private void HighlightForKing() {
+        if (onBlock.x < 7) {
+            CheckAndHighlight(board.squaresArray[onBlock.x + 1, onBlock.y]); // Top
+        }
+        if (onBlock.x < 7 && onBlock.y < 7) {
+            CheckAndHighlight(board.squaresArray[onBlock.x + 1, onBlock.y + 1]); // Top Left
+        }
+        if (onBlock.y < 7) {
+            CheckAndHighlight(board.squaresArray[onBlock.x, onBlock.y + 1]); // Left
+        }
+        if (onBlock.x > 0 && onBlock.y < 7) {
+            CheckAndHighlight(board.squaresArray[onBlock.x - 1, onBlock.y + 1]); // Left Bottom
+        }
+        if (onBlock.x > 0) {
+            CheckAndHighlight(board.squaresArray[onBlock.x - 1, onBlock.y]); // Bottom
+        }
+        if (onBlock.x > 0 && onBlock.y > 0) {
+            CheckAndHighlight(board.squaresArray[onBlock.x - 1, onBlock.y - 1]); // Bottom Right
+        }
+        if (onBlock.y > 1) {
+            CheckAndHighlight(board.squaresArray[onBlock.x, onBlock.y - 1]); // Right
+        }
+        if (onBlock.x < 7 && onBlock.y > 1) {
+            CheckAndHighlight(board.squaresArray[onBlock.x + 1, onBlock.y - 1]); // Right Top
+        }
+    }
+
+    private void CheckAndHighlight(Square square) {
+        if (square.pieceOnTop == null || square.pieceOnTop.isWhite != isWhite) {
+            square.HighlightSquare(true);
         }
     }
 
@@ -96,10 +156,7 @@ public class Piece : MonoBehaviour {
         while (x < 7 && y > 0) {
             Square square = board.squaresArray[x + 1, y - 1];
             if (!blockedByPiece && (square.pieceOnTop == null || square.pieceOnTop.isWhite != isWhite)) {
-                if (square.pieceOnTop != null && square.pieceOnTop.isWhite != isWhite) {
-                    blockedByPiece = true;
-                }
-                square.HighlightSquare(true);
+                blockedByPiece = CheckIfBlockedAndHighlight(square);
             } else {
                 break;
             }
@@ -113,10 +170,7 @@ public class Piece : MonoBehaviour {
         while (x > 0 && y < 7) {
             Square square = board.squaresArray[x - 1, y + 1];
             if (!blockedByPiece && (square.pieceOnTop == null || square.pieceOnTop.isWhite != isWhite)) {
-                if (square.pieceOnTop != null && square.pieceOnTop.isWhite != isWhite) {
-                    blockedByPiece = true;
-                }
-                square.HighlightSquare(true);
+                blockedByPiece = CheckIfBlockedAndHighlight(square);
             } else {
                 break;
             }
@@ -130,10 +184,7 @@ public class Piece : MonoBehaviour {
         while (x < 7 && y < 7) {
             Square square = board.squaresArray[x + 1, y + 1];
             if (!blockedByPiece && (square.pieceOnTop == null || square.pieceOnTop.isWhite != isWhite)) {
-                if (square.pieceOnTop != null && square.pieceOnTop.isWhite != isWhite) {
-                    blockedByPiece = true;
-                }
-                square.HighlightSquare(true);
+                blockedByPiece = CheckIfBlockedAndHighlight(square);
             } else {
                 break;
             }
@@ -147,10 +198,7 @@ public class Piece : MonoBehaviour {
         while (x > 0 && y > 0) {
             Square square = board.squaresArray[x - 1, y - 1];
             if (!blockedByPiece && (square.pieceOnTop == null || square.pieceOnTop.isWhite != isWhite)) {
-                if (square.pieceOnTop != null && square.pieceOnTop.isWhite != isWhite) {
-                    blockedByPiece = true;
-                }
-                square.HighlightSquare(true);
+                blockedByPiece = CheckIfBlockedAndHighlight(square);
             } else {
                 break;
             }
@@ -166,10 +214,7 @@ public class Piece : MonoBehaviour {
         while (x < 7) {
             Square above = board.squaresArray[x + 1, y];
             if (!blockedByPiece && (above.pieceOnTop == null || above.pieceOnTop.isWhite != isWhite)) {
-                if (above.pieceOnTop != null && above.pieceOnTop.isWhite != isWhite) {
-                    blockedByPiece = true;
-                }
-                above.HighlightSquare(true);
+                blockedByPiece = CheckIfBlockedAndHighlight(above);
             } else {
                 break;
             }
@@ -182,10 +227,7 @@ public class Piece : MonoBehaviour {
         while (x > 0) {
             Square below = board.squaresArray[x - 1, y];
             if (!blockedByPiece && (below.pieceOnTop == null || below.pieceOnTop.isWhite != isWhite)) {
-                if (below.pieceOnTop != null && below.pieceOnTop.isWhite != isWhite) {
-                    blockedByPiece = true;
-                }
-                below.HighlightSquare(true);
+                blockedByPiece = CheckIfBlockedAndHighlight(below);
             } else {
                 break;
             }
@@ -198,10 +240,7 @@ public class Piece : MonoBehaviour {
         while (y < 7) {
             Square right = board.squaresArray[x, y + 1];
             if (!blockedByPiece && (right.pieceOnTop == null || right.pieceOnTop.isWhite != isWhite)) {
-                if (right.pieceOnTop != null && right.pieceOnTop.isWhite != isWhite) {
-                    blockedByPiece = true;
-                }
-                right.HighlightSquare(true);
+                blockedByPiece = CheckIfBlockedAndHighlight(right);
             } else {
                 break;
             }
@@ -214,10 +253,7 @@ public class Piece : MonoBehaviour {
         while (y > 0) {
             Square left = board.squaresArray[x, y - 1];
             if (!blockedByPiece && (left.pieceOnTop == null || left.pieceOnTop.isWhite != isWhite)) {
-                if (left.pieceOnTop != null && left.pieceOnTop.isWhite != isWhite) {
-                    blockedByPiece = true;
-                }
-                left.HighlightSquare(true);
+                blockedByPiece = CheckIfBlockedAndHighlight(left);
             } else {
                 break;
             }
@@ -225,112 +261,9 @@ public class Piece : MonoBehaviour {
         }
     }
 
-    private void HighlightForKnight() {
-        if (onBlock.x < 6 && onBlock.y > 0) {
-            Square topRight = board.squaresArray[onBlock.x + 2, onBlock.y - 1];
-            if (topRight.pieceOnTop == null || topRight.pieceOnTop.isWhite != isWhite) {
-                topRight.HighlightSquare(true);
-            }
-        }
-        if (onBlock.x < 6 && onBlock.y < 7) {
-            Square topLeft = board.squaresArray[onBlock.x + 2, onBlock.y + 1];
-            if (topLeft.pieceOnTop == null || topLeft.pieceOnTop.isWhite != isWhite) {
-                topLeft.HighlightSquare(true);
-            }
-        }
-        if (onBlock.x < 7 && onBlock.y < 6) {
-            Square leftTop = board.squaresArray[onBlock.x + 1, onBlock.y + 2];
-            if (leftTop.pieceOnTop == null || leftTop.pieceOnTop.isWhite != isWhite) {
-                leftTop.HighlightSquare(true);
-            }
-        }
-        if (onBlock.x > 0 && onBlock.y < 6) {
-            Square leftBottom = board.squaresArray[onBlock.x - 1, onBlock.y + 2];
-            if (leftBottom.pieceOnTop == null || leftBottom.pieceOnTop.isWhite != isWhite) {
-                leftBottom.HighlightSquare(true);
-            }
-        }
-        if (onBlock.x > 1 && onBlock.y < 7) {
-            Square bottomLeft = board.squaresArray[onBlock.x - 2, onBlock.y + 1];
-            if (bottomLeft.pieceOnTop == null || bottomLeft.pieceOnTop.isWhite != isWhite) {
-                bottomLeft.HighlightSquare(true);
-            }
-        }
-        if (onBlock.x > 1 && onBlock.y > 0) {
-            Square bottomRight = board.squaresArray[onBlock.x - 2, onBlock.y - 1];
-            if (bottomRight.pieceOnTop == null || bottomRight.pieceOnTop.isWhite != isWhite) {
-                bottomRight.HighlightSquare(true);
-            }
-        }
-        if (onBlock.x > 0 && onBlock.y > 1) {
-            Square rightBottom = board.squaresArray[onBlock.x - 1, onBlock.y - 2];
-            if (rightBottom.pieceOnTop == null || rightBottom.pieceOnTop.isWhite != isWhite) {
-                rightBottom.HighlightSquare(true);
-            }
-        }
-        if (onBlock.x < 7 && onBlock.y > 1) {
-            Square rightTop = board.squaresArray[onBlock.x + 1, onBlock.y - 2];
-            if (rightTop.pieceOnTop == null || rightTop.pieceOnTop.isWhite != isWhite) {
-                rightTop.HighlightSquare(true);
-            }
-        }
-    }
-
-    //private void CheckAndHighlight(Square topRight) {
-    //    if (topRight.pieceOnTop == null || topRight.pieceOnTop.isWhite != isWhite) {
-    //        topRight.HighlightSquare(true);
-    //    }
-    //}
-
-    private void HighlightForKing() {
-        if (onBlock.x < 7) {
-            Square top = board.squaresArray[onBlock.x + 1, onBlock.y];
-            if (top.pieceOnTop == null || top.pieceOnTop.isWhite != isWhite) {
-                top.HighlightSquare(true);
-            }
-        }
-        if (onBlock.x < 7 && onBlock.y < 7) {
-            Square topLeft = board.squaresArray[onBlock.x + 1, onBlock.y + 1];
-            if (topLeft.pieceOnTop == null || topLeft.pieceOnTop.isWhite != isWhite) {
-                topLeft.HighlightSquare(true);
-            }
-        }
-        if (onBlock.y < 7) {
-            Square left = board.squaresArray[onBlock.x, onBlock.y + 1];
-            if (left.pieceOnTop == null || left.pieceOnTop.isWhite != isWhite) {
-                left.HighlightSquare(true);
-            }
-        }
-        if (onBlock.x > 0 && onBlock.y < 7) {
-            Square leftBottom = board.squaresArray[onBlock.x - 1, onBlock.y + 1];
-            if (leftBottom.pieceOnTop == null || leftBottom.pieceOnTop.isWhite != isWhite) {
-                leftBottom.HighlightSquare(true);
-            }
-        }
-        if (onBlock.x > 0) {
-            Square bottom = board.squaresArray[onBlock.x - 1, onBlock.y];
-            if (bottom.pieceOnTop == null || bottom.pieceOnTop.isWhite != isWhite) {
-                bottom.HighlightSquare(true);
-            }
-        }
-        if (onBlock.x > 0 && onBlock.y > 0) {
-            Square bottomRight = board.squaresArray[onBlock.x - 1, onBlock.y - 1];
-            if (bottomRight.pieceOnTop == null || bottomRight.pieceOnTop.isWhite != isWhite) {
-                bottomRight.HighlightSquare(true);
-            }
-        }
-        if (onBlock.y > 1) {
-            Square right = board.squaresArray[onBlock.x, onBlock.y - 1];
-            if (right.pieceOnTop == null || right.pieceOnTop.isWhite != isWhite) {
-                right.HighlightSquare(true);
-            }
-        }
-        if (onBlock.x < 7 && onBlock.y > 1) {
-            Square rightTop = board.squaresArray[onBlock.x + 1, onBlock.y - 1];
-            if (rightTop.pieceOnTop == null || rightTop.pieceOnTop.isWhite != isWhite) {
-                rightTop.HighlightSquare(true);
-            }
-        }
+    bool CheckIfBlockedAndHighlight(Square square) {
+        square.HighlightSquare(true);
+        return (square.pieceOnTop != null && square.pieceOnTop.isWhite != isWhite);
     }
 
     private void HighlightForQueen() {
