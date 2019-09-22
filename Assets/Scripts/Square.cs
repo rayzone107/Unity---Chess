@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Square : MonoBehaviour {
 
-    [SerializeField] public int xLocation;
-    [SerializeField] public int yLocation;
-    [SerializeField] public int columnInRow;
+    [SerializeField] public int xTransform;
+    [SerializeField] public int zTransform;
+
+    [SerializeField] public int x;
+    [SerializeField] public int y;
+
     [SerializeField] public bool isWhite;
     [SerializeField] public Piece pieceOnTop;
     [SerializeField] Board board;
@@ -38,7 +41,7 @@ public class Square : MonoBehaviour {
                 moveToDestroyedArea(pieceOnTop);
             }
 
-            Vector3 moveTo = new Vector3(xLocation, board.currentSelectedPiece.transform.position.y, yLocation);
+            Vector3 moveTo = new Vector3(xTransform, board.currentSelectedPiece.transform.position.y, zTransform);
             board.currentSelectedPiece.transform.position = moveTo;
             board.isCurrentPlayerWhite = !board.isCurrentPlayerWhite;
 
