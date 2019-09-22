@@ -65,12 +65,37 @@ public class Piece : MonoBehaviour {
             if (square.pieceOnTop != null && (square.pieceOnTop.isWhite == isWhite)) {
                 continue;
             }
-
+            bool toBeHighlighted = false;
             if (square.yLocation == onBlock.yLocation) {
-                if ((numberOfTurnsPlayed == 0 && (square.xLocation == onBlock.xLocation + (isWhite ? -12 : 12)))
-                        || (square.xLocation == onBlock.xLocation + (isWhite ? -6 : 6))) {
-                    square.HighlightSquare(true);
+                if (numberOfTurnsPlayed == 0 && (square.xLocation == onBlock.xLocation + (isWhite ? -12 : 12))) {
+                    if (square.pieceOnTop == null) {
+                        toBeHighlighted = true;
+
+                    }
                 }
+                if (square.xLocation == onBlock.xLocation + (isWhite ? -6 : 6)) {
+                    if (square.pieceOnTop == null) {
+                        toBeHighlighted = true;
+                    }
+                }
+            }
+
+            if (square.pieceOnTop != null &&
+                !square.pieceOnTop.isWhite &&
+                square.xLocation == onBlock.xLocation - 6 &&
+                (square.yLocation == onBlock.yLocation - 6 || square.yLocation == onBlock.yLocation + 6) &&
+                onBlock.pieceOnTop.isWhite) {
+                toBeHighlighted = true;
+            } else if (square.pieceOnTop != null &&
+                square.pieceOnTop.isWhite &&
+                square.xLocation == onBlock.xLocation + 6 &&
+                (square.yLocation == onBlock.yLocation - 6 || square.yLocation == onBlock.yLocation + 6) &&
+                !onBlock.pieceOnTop.isWhite) {
+                toBeHighlighted = true;
+            }
+
+            if (toBeHighlighted) {
+                square.HighlightSquare(true);
             }
         }
     }

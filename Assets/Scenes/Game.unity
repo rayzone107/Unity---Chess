@@ -3912,7 +3912,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 3
   yLocation: 3
-  color: 0
+  columnInRow: 3
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -3949,7 +3950,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -15
   yLocation: 15
-  color: 1
+  columnInRow: 1
+  isWhite: 0
   pieceOnTop: {fileID: 1020161546}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4070,7 +4072,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -3
   yLocation: -9
-  color: 1
+  columnInRow: 5
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4107,7 +4110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 9
   yLocation: -9
-  color: 1
+  columnInRow: 5
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4144,7 +4148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -3
   yLocation: -21
-  color: 1
+  columnInRow: 7
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4187,7 +4192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -21
   yLocation: 9
-  color: 1
+  columnInRow: 2
+  isWhite: 0
   pieceOnTop: {fileID: 11703974}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4224,7 +4230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -21
   yLocation: 21
-  color: 1
+  columnInRow: 0
+  isWhite: 0
   pieceOnTop: {fileID: 1400333709}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4261,7 +4268,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -21
   yLocation: 3
-  color: 0
+  columnInRow: 3
+  isWhite: 1
   pieceOnTop: {fileID: 1205589744}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4298,7 +4306,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 3
   yLocation: -21
-  color: 0
+  columnInRow: 7
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4335,7 +4344,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -9
   yLocation: 21
-  color: 1
+  columnInRow: 0
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4372,7 +4382,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -3
   yLocation: 3
-  color: 1
+  columnInRow: 3
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4409,7 +4420,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 9
   yLocation: 21
-  color: 0
+  columnInRow: 0
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4452,7 +4464,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 15
   yLocation: 15
-  color: 0
+  columnInRow: 1
+  isWhite: 1
   pieceOnTop: {fileID: 1511266658}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4489,7 +4502,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 9
   yLocation: -15
-  color: 0
+  columnInRow: 6
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4526,7 +4540,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -21
   yLocation: -9
-  color: 0
+  columnInRow: 5
+  isWhite: 1
   pieceOnTop: {fileID: 2044508107}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4563,7 +4578,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -21
   yLocation: -15
-  color: 1
+  columnInRow: 6
+  isWhite: 0
   pieceOnTop: {fileID: 1144604886}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4600,7 +4616,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -15
   yLocation: 21
-  color: 0
+  columnInRow: 0
+  isWhite: 1
   pieceOnTop: {fileID: 1070090045}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4637,7 +4654,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 15
   yLocation: 21
-  color: 1
+  columnInRow: 0
+  isWhite: 0
   pieceOnTop: {fileID: 754203157}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4674,7 +4692,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 9
   yLocation: -3
-  color: 0
+  columnInRow: 4
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4711,7 +4730,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 21
   yLocation: -9
-  color: 1
+  columnInRow: 5
+  isWhite: 0
   pieceOnTop: {fileID: 361205066}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4748,7 +4768,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -21
   yLocation: -3
-  color: 1
+  columnInRow: 4
+  isWhite: 0
   pieceOnTop: {fileID: 1824444395}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -4785,7 +4806,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -9
   yLocation: 9
-  color: 1
+  columnInRow: 2
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -6846,6 +6868,158 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9eb0e3de5229a419ba7b6f5b2811f9e2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bcca71eeca9742f2922250ea81f00d7, type: 3}
+--- !u!1 &1883653704066521371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1541907391966220182, guid: 2bcca71eeca9742f2922250ea81f00d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1883653704066521370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1883653704066521372 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6794799723496294762, guid: 2bcca71eeca9742f2922250ea81f00d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1883653704066521370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1883653704066521373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3990950903169283668, guid: 2bcca71eeca9742f2922250ea81f00d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1883653704066521370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1883653704066521374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5714916442971407156, guid: 2bcca71eeca9742f2922250ea81f00d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1883653704066521370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1883653704066521375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7123232377457248404, guid: 2bcca71eeca9742f2922250ea81f00d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1883653704066521370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1883653704066521376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7869783314922142211, guid: 2bcca71eeca9742f2922250ea81f00d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1883653704066521370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1883653704066521377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5351943458639329480, guid: 2bcca71eeca9742f2922250ea81f00d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1883653704066521370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1883653704066521378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4978809905752015780, guid: 2bcca71eeca9742f2922250ea81f00d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1883653704066521370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1883653704066521379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883653704066521371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001ad92efe25344cea13cc1fef096745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowLocation: 7
+--- !u!114 &1883653704066521380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883653704066521372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001ad92efe25344cea13cc1fef096745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowLocation: 5
+--- !u!114 &1883653704066521381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883653704066521373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001ad92efe25344cea13cc1fef096745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowLocation: 4
+--- !u!114 &1883653704066521382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883653704066521374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001ad92efe25344cea13cc1fef096745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowLocation: 3
+--- !u!114 &1883653704066521383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883653704066521375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001ad92efe25344cea13cc1fef096745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowLocation: 2
+--- !u!114 &1883653704066521384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883653704066521376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001ad92efe25344cea13cc1fef096745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowLocation: 1
+--- !u!114 &1883653704066521385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883653704066521377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001ad92efe25344cea13cc1fef096745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowLocation: 0
+--- !u!114 &1883653704066521386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883653704066521378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001ad92efe25344cea13cc1fef096745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowLocation: 6
 --- !u!1 &2010691988461519729 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 127082264927591019, guid: 2bcca71eeca9742f2922250ea81f00d7,
@@ -6866,7 +7040,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -9
   yLocation: -3
-  color: 1
+  columnInRow: 4
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -6903,7 +7078,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 21
   yLocation: 9
-  color: 0
+  columnInRow: 2
+  isWhite: 1
   pieceOnTop: {fileID: 902875440}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -6940,7 +7116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -15
   yLocation: -9
-  color: 1
+  columnInRow: 5
+  isWhite: 0
   pieceOnTop: {fileID: 1322387657}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -6977,7 +7154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -9
   yLocation: 3
-  color: 0
+  columnInRow: 3
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7014,7 +7192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -9
   yLocation: -15
-  color: 1
+  columnInRow: 6
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7051,7 +7230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 9
   yLocation: 9
-  color: 0
+  columnInRow: 2
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7088,7 +7268,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 21
   yLocation: 21
-  color: 0
+  columnInRow: 0
+  isWhite: 1
   pieceOnTop: {fileID: 824084680}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7125,7 +7306,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 15
   yLocation: -15
-  color: 1
+  columnInRow: 6
+  isWhite: 0
   pieceOnTop: {fileID: 1243164543}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7236,7 +7418,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -3
   yLocation: 15
-  color: 1
+  columnInRow: 1
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7273,7 +7456,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 15
   yLocation: -21
-  color: 0
+  columnInRow: 7
+  isWhite: 1
   pieceOnTop: {fileID: 253412887}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7310,7 +7494,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 21
   yLocation: -15
-  color: 0
+  columnInRow: 6
+  isWhite: 1
   pieceOnTop: {fileID: 1796298142}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7421,7 +7606,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -15
   yLocation: -3
-  color: 0
+  columnInRow: 4
+  isWhite: 1
   pieceOnTop: {fileID: 1466786013}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7458,7 +7644,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -3
   yLocation: -3
-  color: 0
+  columnInRow: 4
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7495,7 +7682,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -15
   yLocation: 9
-  color: 0
+  columnInRow: 2
+  isWhite: 1
   pieceOnTop: {fileID: 887668504}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7532,7 +7720,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -15
   yLocation: -15
-  color: 0
+  columnInRow: 6
+  isWhite: 1
   pieceOnTop: {fileID: 604825439}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7569,7 +7758,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 9
   yLocation: 3
-  color: 1
+  columnInRow: 3
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7606,7 +7796,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 3
   yLocation: -3
-  color: 1
+  columnInRow: 4
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7643,7 +7834,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 15
   yLocation: -9
-  color: 0
+  columnInRow: 5
+  isWhite: 1
   pieceOnTop: {fileID: 174368183}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7723,7 +7915,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 21
   yLocation: 15
-  color: 1
+  columnInRow: 1
+  isWhite: 0
   pieceOnTop: {fileID: 30380747}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7844,7 +8037,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 21
   yLocation: -3
-  color: 0
+  columnInRow: 4
+  isWhite: 1
   pieceOnTop: {fileID: 1340473325}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -7965,7 +8159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 9
   yLocation: 15
-  color: 1
+  columnInRow: 1
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8002,7 +8197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 15
   yLocation: -3
-  color: 1
+  columnInRow: 4
+  isWhite: 0
   pieceOnTop: {fileID: 174561066}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8039,7 +8235,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 15
   yLocation: 3
-  color: 0
+  columnInRow: 3
+  isWhite: 1
   pieceOnTop: {fileID: 1239912434}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8076,7 +8273,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 3
   yLocation: 15
-  color: 0
+  columnInRow: 1
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8113,7 +8311,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 3
   yLocation: 21
-  color: 1
+  columnInRow: 0
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8151,6 +8350,8 @@ MonoBehaviour:
   isCurrentPlayerWhite: 1
   isPieceSelected: 0
   currentSelectedPiece: {fileID: 0}
+  destroyedWhiteCount: 0
+  destroyedBlackCount: 0
 --- !u!1 &6239604389327636900 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5526921912408363198, guid: 2bcca71eeca9742f2922250ea81f00d7,
@@ -8171,7 +8372,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -15
   yLocation: -21
-  color: 1
+  columnInRow: 7
+  isWhite: 0
   pieceOnTop: {fileID: 1281439662}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8208,7 +8410,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -9
   yLocation: -21
-  color: 0
+  columnInRow: 7
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8245,7 +8448,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 3
   yLocation: 9
-  color: 1
+  columnInRow: 2
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8282,7 +8486,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 3
   yLocation: -15
-  color: 1
+  columnInRow: 6
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8319,7 +8524,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 15
   yLocation: 9
-  color: 1
+  columnInRow: 2
+  isWhite: 0
   pieceOnTop: {fileID: 1206663513}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8439,7 +8645,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 9
   yLocation: -21
-  color: 1
+  columnInRow: 7
+  isWhite: 0
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8476,7 +8683,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 3
   yLocation: -9
-  color: 0
+  columnInRow: 5
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8513,7 +8721,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -3
   yLocation: 21
-  color: 0
+  columnInRow: 0
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8550,7 +8759,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 21
   yLocation: -21
-  color: 1
+  columnInRow: 7
+  isWhite: 0
   pieceOnTop: {fileID: 446000990}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8587,7 +8797,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -9
   yLocation: 15
-  color: 0
+  columnInRow: 1
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8624,7 +8835,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -3
   yLocation: -15
-  color: 0
+  columnInRow: 6
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8667,7 +8879,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -15
   yLocation: 3
-  color: 1
+  columnInRow: 3
+  isWhite: 0
   pieceOnTop: {fileID: 1592343909}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8704,7 +8917,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: 21
   yLocation: 3
-  color: 1
+  columnInRow: 3
+  isWhite: 0
   pieceOnTop: {fileID: 4872192381241817423}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8741,7 +8955,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -3
   yLocation: 9
-  color: 0
+  columnInRow: 2
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8784,7 +8999,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -21
   yLocation: 15
-  color: 0
+  columnInRow: 1
+  isWhite: 1
   pieceOnTop: {fileID: 625187318}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8821,7 +9037,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -21
   yLocation: -21
-  color: 0
+  columnInRow: 7
+  isWhite: 1
   pieceOnTop: {fileID: 1775574165}
   board: {fileID: 6234995194195011175}
   isAllowed: 0
@@ -8858,7 +9075,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLocation: -9
   yLocation: -9
-  color: 0
+  columnInRow: 5
+  isWhite: 1
   pieceOnTop: {fileID: 0}
   board: {fileID: 6234995194195011175}
   isAllowed: 0

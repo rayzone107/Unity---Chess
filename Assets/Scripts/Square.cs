@@ -6,7 +6,8 @@ public class Square : MonoBehaviour {
 
     [SerializeField] public int xLocation;
     [SerializeField] public int yLocation;
-    [SerializeField] public ColorType color;
+    [SerializeField] public int columnInRow;
+    [SerializeField] public bool isWhite;
     [SerializeField] public Piece pieceOnTop;
     [SerializeField] Board board;
     public bool isAllowed;
@@ -27,7 +28,7 @@ public class Square : MonoBehaviour {
     public void HighlightSquare(bool isHighlighted) {
         isAllowed = isHighlighted;
         gameObject.GetComponent<Renderer>().material.color =
-            isHighlighted ? Constants.highlightedSquare : (color.Equals(ColorType.White) ? Constants.whiteSquare : Constants.blackSquare);
+            isHighlighted ? Constants.highlightedSquare : (isWhite ? Constants.whiteSquare : Constants.blackSquare);
     }
 
     public void moveToBlock() {
