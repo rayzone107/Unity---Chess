@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4487707, g: 0.49882752, b: 0.5756923, a: 1}
+  m_IndirectSpecularColor: {r: 0.44971097, g: 0.4997788, b: 0.5756353, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1296,7 +1296,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1e-45}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1307,13 +1307,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.85332656, y: -0.011394048, z: 0.33719522, w: 0.39749652}
-  m_LocalPosition: {x: -7.98, y: 20.98, z: 20.14}
+  m_LocalRotation: {x: 0.83112985, y: -0.02709752, z: 0.41127396, w: 0.37328625}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 136.68, y: -51.12799, z: -19.981995}
+  m_LocalEulerAnglesHint: {x: 140, y: -60, z: -20}
 --- !u!1 &721267476
 GameObject:
   m_ObjectHideFlags: 0
@@ -3340,6 +3340,7 @@ GameObject:
   - component: {fileID: 1258725207}
   - component: {fileID: 1258725206}
   - component: {fileID: 1258725205}
+  - component: {fileID: 1258725208}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -3405,13 +3406,32 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258725204}
-  m_LocalRotation: {x: 0.38868004, y: -0.5903968, z: 0.3879987, w: 0.5914528}
-  m_LocalPosition: {x: 27.041197, y: 49.02878, z: 1.7213926}
+  m_LocalRotation: {x: 0.45451945, y: -0.54167527, z: 0.45451945, w: 0.54167527}
+  m_LocalPosition: {x: 12, y: 50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 80, y: -90, z: 0}
+--- !u!95 &1258725208
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258725204}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f5c7526869dd54735b5f67762c998cd1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1281439661 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8162237651417224563, guid: 6382fb5beaee8411b8baaa5e444b4608,

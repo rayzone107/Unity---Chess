@@ -16,6 +16,9 @@ public class Square : MonoBehaviour {
     [SerializeField] Board board;
     public bool isAllowed;
 
+    public List<Piece> whitePiecesThatCanAttack = new List<Piece>();
+    public List<Piece> blackPiecesThatCanAttack = new List<Piece>();
+
     private void OnMouseDown() {
         if (board.isPieceSelected) {
             moveToBlock();
@@ -54,6 +57,26 @@ public class Square : MonoBehaviour {
             pieceOnTop.HighlightPiece(false);
             RemoveHighlightFromAllSquares();
             ShowChangePlayer();
+            board.MarkAttackableSquares();
+            VerifyCheckAndCheckmate();
+            //Animator animator = FindObjectOfType<Camera>().GetComponent<Animator>();
+            //animator.SetTrigger(board.isCurrentPlayerWhite ? "blackToWhiteTurnChanged" : "whiteToBlackTurnChanged");
+        }
+    }
+
+    private void VerifyCheckAndCheckmate() {
+        bool isWhiteCheck = board.IsWhiteCheck();
+        bool isBlackCheck = board.IsBlackCheck();
+
+        bool isWhiteCheckmate = board.isWhiteCheckmate();
+        bool isBlackCheckmate = board.isBlackCheckmate();
+
+        if (isWhiteCheck) {
+            Debug.Log(isWhiteCheckmate ? "White Check Mate" : "White Checked");
+        }
+
+        if (isBlackCheck) {
+            Debug.Log(isBlackCheckmate ? "Black Check Mate" : "Black Checked");
         }
     }
 
